@@ -1,0 +1,12 @@
+version: '3'
+services:
+  libcoap:
+    build: "libcoap"
+    ports:
+      - "5683:5683/udp"
+      - "5684:5684/udp"
+  cf-rd:
+    build: "cf-rd"
+    ports:
+      - "5693:5683/udp"
+      - "5694:5684/udp"
